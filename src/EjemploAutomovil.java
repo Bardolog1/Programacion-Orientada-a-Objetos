@@ -1,10 +1,10 @@
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
-        Automovil camaro = new Automovil("Chevrolet","Camaro","Rojo metal escarlata",2.3);
+        Automovil camaro = new Automovil("Chevrolet","Camaro",Color.ROJO,new Motor(2.3,TipoMotor.BENCINA), new Tanque(100), TipoAutomovil.PICKUP);
         Automovil raptor = new Automovil("Ford","Raptor");
         Automovil ram =new Automovil();
-        Automovil sandero = new Automovil("Renult","Sandero","Amarillo Terracota",2.3,50);
+        Automovil sandero = new Automovil("Renult","Sandero",Color.AMARILLO,new Motor(2.5, TipoMotor.DISEL), new Tanque(100), TipoAutomovil.PICKUP);
         // instanciamos la clase es decir creamos
         // un objeto aparatir de la clase, en este
         // caso creamos el objeto auto y tomamos como
@@ -14,27 +14,25 @@ public class EjemploAutomovil {
         //creamos el constructor y le pasamos los parametros
         // que requiere sin necesidad de pasarlos mpor el set de la clase
 
-        camaro.setCilindrada(2.3);
-        camaro.setColor("");
-        camaro.setTanque(30);
+
 
         System.out.println("auto.fabricante: " +camaro.getFabricante());
         System.out.println("auto.modeloe: " + camaro.getModelo());
         System.out.println("auto.color: " + camaro.getColor());
-        System.out.println("auto.cilindrada: " + camaro.getCilindrada());
+        System.out.println("auto.cilindrada: " + camaro.getMotor());
         // ahora creamos otro auto apartir de la misma clase Automovil
         // ahora imprimimos pero usando el metodo del objeto
 
 
-        raptor.setColor("Azul metal profundo");
-        raptor.setCilindrada(3.5);
-        raptor.setTanque(80);
+        raptor.setColor(Color.AZUL);
+        raptor.setMotor(new Motor(3.5, TipoMotor.BENCINA));
+        raptor.setTanque(new Tanque(100));
 
-        ram.setCilindrada(5.2);
+        ram.setMotor(new Motor(3.8, TipoMotor.BENCINA));
         ram.setFabricante("RAM");
         ram.setModelo("TReX 15000");
-        ram.setTanque(100);
-        ram.setColor("Plata Brillante");
+        ram.setTanque(new Tanque(80));
+        ram.setColor(Color.GRIS);
 
 
 
